@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Cápsula 2 – ¿Cómo funciona y qué límites tiene?</title>
+<style>
+  @font-face { font-family: "Bebas"; src: url(assets/bebas.woff2) format("woff2"); }
+  @font-face { font-family: "Poppins"; font-weight: 400; src: url(assets/poppins400.woff2) format("woff2"); }
+  @font-face { font-family: "Poppins"; font-weight: 600; src: url(assets/poppins600.woff2) format("woff2"); }
+  @font-face { font-family: "Poppins"; font-weight: 700; src: url(assets/poppins700.woff2) format("woff2"); }
+  :root {
+    --amarillo: #FEBA00; --azul: #003089; --rojo: #D80023;
+    --verde: #288038; --teal: #007C7F;
+  }
+  html, body { margin: 0; background: #000; }
+  #stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: "Poppins", sans-serif; color: #fff; }
+  .scene { position: absolute; inset: 0; opacity: 0; }
+  .bg { position: absolute; inset: 0; overflow: hidden; }
+  /* Las fotos traen el logo quemado arriba: se recorta esa franja y se escala */
+  .bg img { position: absolute; left: 50%; top: 50%; width: 1400px; height: auto; transform-origin: center; }
+  .shade { position: absolute; inset: 0; background: rgba(20, 22, 24, .55); }
+  .abs { position: absolute; left: 0; right: 0; text-align: center; }
+  .h-bebas { font-family: "Bebas"; line-height: .95; letter-spacing: 1px; text-shadow: 0 6px 24px rgba(0,0,0,.35); }
+  .label { font-weight: 600; font-size: 46px; text-shadow: 0 3px 12px rgba(0,0,0,.5); }
+  .small { font-weight: 400; font-size: 30px; opacity: .9; }
+  .circle { position: absolute; width: 190px; height: 190px; border-radius: 50%; background: var(--verde);
+            display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(0,0,0,.3); }
+  .circle svg { width: 104px; height: 104px; fill: none; stroke: #fff; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .pill { display: inline-block; background: var(--verde); border-radius: 22px; padding: 22px 46px; font-weight: 600; font-size: 46px; }
+  #header { position: absolute; left: 300px; top: 90px; width: 480px; z-index: 1000; }
+  #bar { position: absolute; left: 0; right: 0; bottom: 0; height: 44px; display: flex; z-index: 1000; }
+  #bar i:nth-child(1) { width: 470px; background: var(--amarillo); }
+  #bar i:nth-child(2) { width: 358px; background: var(--azul); }
+  #bar i:nth-child(3) { flex: 1; background: var(--rojo); }
+  .wipe { position: absolute; left: -900px; top: -600px; width: 2900px; height: 3200px; z-index: 900; pointer-events: none; }
+  .wipe i { position: absolute; top: 0; height: 100%; }
+  .wipe i:nth-child(1) { left: 0; width: 1400px; background: var(--amarillo); }
+  .wipe i:nth-child(2) { left: 1400px; width: 700px; background: var(--azul); }
+  .wipe i:nth-child(3) { left: 2100px; width: 700px; background: var(--rojo); }
+  .scene:not(#s1) > :not(.bg):not(.shade) { margin-top: 200px; }
+  .line { position: absolute; height: 6px; background: #fff; transform-origin: left center; }
+  .badge { display: inline-block; background: var(--amarillo); color: var(--azul); font-weight: 700; font-size: 34px; padding: 10px 30px; border-radius: 40px; }
+  .num { font-family: "Bebas"; font-size: 120px; width: 110px; height: 110px; line-height: 118px; border-radius: 50%; background: var(--amarillo); color: var(--azul); display: inline-block; font-size: 80px; }
+</style>
+</head>
+<body>
+<div id="stage">
+
+  <!-- 1 · Título -->
+  <div class="scene" id="s1">
+    <div class="bg"><img src="assets/bg_ciudad_plana.jpg" data-kb="1.05,1.12"></div>
+    <div class="abs" style="top:330px"><span class="badge" id="s1b">CÁPSULA 2</span></div>
+    <div class="abs h-bebas" style="top:470px;font-size:150px;padding:0 90px" id="s1t">
+      <span>¿CÓMO</span> <span>FUNCIONA</span> <span>Y</span> <span>QUÉ</span> <span>LÍMITES</span> <span>TIENE?</span>
+    </div>
+  </div>
+
+  <!-- 2 · El contrato -->
+  <div class="scene" id="s2">
+    <div class="bg"><img src="assets/bg_planos.jpg" data-kb="1.0,1.1"></div><div class="shade"></div>
+    <div class="abs label" style="top:560px;font-size:58px;font-weight:700" id="s2t">Se firma un contrato</div>
+    <div class="circle" id="s2a" style="left:120px;top:720px"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21v-9M9.5 21v-9M14.5 21v-9M19 21v-9M2 9.5 12 4l10 5.5z"/></svg></div>
+    <div class="circle" id="s2c" style="left:445px;top:720px;background:#fff"><svg viewBox="0 0 24 24" style="stroke:var(--verde)"><path d="M14 3H6.5A1.5 1.5 0 0 0 5 4.5v15A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5V8z M14 3v5h5 M8 12h8 M8 15.5h5 M12.5 18.5c1-1.3 1.8-1.3 2.2 0 .4 1 1.1 1 2-.2"/></svg></div>
+    <div class="circle" id="s2b" style="left:770px;top:720px"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.2 3.6-6.5 8-6.5s8 2.3 8 6.5"/></svg></div>
+    <div class="line" id="s2l1" style="left:310px;top:812px;width:135px"></div>
+    <div class="line" id="s2l2" style="left:635px;top:812px;width:135px"></div>
+    <div class="abs" style="top:940px;left:30px;right:auto;width:370px" id="s2la"><div class="label" style="font-size:38px">Entidad pública</div><div class="small">(Superficiante)</div></div>
+    <div class="abs" style="top:940px;left:auto;right:30px;width:370px" id="s2lb"><div class="label" style="font-size:38px">Tercero interesado</div><div class="small">(Superficiario)</div></div>
+  </div>
+
+  <!-- 3 · Folio de matrícula -->
+  <div class="scene" id="s3">
+    <div class="bg"><img src="assets/bg_ciudad.jpg" data-kb="1.12,1.02"></div><div class="shade"></div>
+    <div class="abs label" style="top:520px" id="s3a">Se inscribe en el</div>
+    <div class="abs h-bebas" style="top:600px;font-size:150px" id="s3t">FOLIO DE<br>MATRÍCULA</div>
+    <div class="abs small" style="top:910px;font-size:38px" id="s3s">del inmueble</div>
+    <div class="circle" id="s3i" style="left:445px;top:1040px;width:190px"><svg viewBox="0 0 24 24"><path d="M14 3H6.5A1.5 1.5 0 0 0 5 4.5v15A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5V8z M14 3v5h5 M8.5 14l2.5 2.5 4.5-5"/></svg></div>
+  </div>
+
+  <!-- 4 · Estudios previos -->
+  <div class="scene" id="s4">
+    <div class="bg"><img src="assets/bg_planos.jpg" data-kb="1.15,1.05" style="filter:blur(3px)"></div><div class="shade" style="background:rgba(20,22,24,.62)"></div>
+    <div class="abs label" style="top:500px;font-size:58px;font-weight:700" id="s4t">Antes, se hacen estudios</div>
+    <div id="s4i1" class="circle" style="left:95px;top:680px"><svg viewBox="0 0 24 24"><path d="M12 3v17M7 20.5h10M4.5 7h15M12 5.2l-7.5 1.8M12 5.2 19.5 7M4.5 7 2 13a2.5 2.5 0 0 0 5 0zM19.5 7 17 13a2.5 2.5 0 0 0 5 0z"/></svg></div>
+    <div id="s4i2" class="circle" style="left:445px;top:680px"><svg viewBox="0 0 24 24"><path d="M2.5 18.5h19M4.5 18.5v-2a7.5 7.5 0 0 1 15 0v2M10 9V5.5h4V9M7.5 11.5 9 13M16.5 11.5 15 13"/></svg></div>
+    <div id="s4i3" class="circle" style="left:795px;top:680px"><svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 15l4-4 3 3 6-7M15.5 7H20v4.5"/></svg></div>
+    <div class="label" id="s4l1" style="position:absolute;left:40px;width:300px;top:895px;text-align:center;font-size:38px">Jurídicos</div>
+    <div class="label" id="s4l2" style="position:absolute;left:390px;width:300px;top:895px;text-align:center;font-size:38px">Técnicos</div>
+    <div class="label" id="s4l3" style="position:absolute;left:740px;width:300px;top:895px;text-align:center;font-size:38px">Financieros</div>
+    <div class="abs" style="top:1100px" id="s4p"><span class="pill">✓ El proyecto es viable</span></div>
+  </div>
+
+  <!-- 5 · 80 años -->
+  <div class="scene" id="s5">
+    <div class="bg"><img src="assets/bg_ciudad.jpg" data-kb="1.0,1.1"></div><div class="shade"></div>
+    <div class="abs label" style="top:500px" id="s5a">Este derecho puede durar</div>
+    <div class="abs h-bebas" style="top:570px;font-size:120px" id="s5h">HASTA</div>
+    <div class="abs h-bebas" style="top:660px;font-size:420px;color:var(--amarillo)" id="s5n">80</div>
+    <div class="abs h-bebas" style="top:1060px;font-size:150px" id="s5y">AÑOS</div>
+    <div style="position:absolute;left:140px;width:800px;top:1260px;height:18px;border-radius:9px;background:rgba(255,255,255,.25)"><div id="s5bar" style="height:100%;width:0;border-radius:9px;background:var(--verde)"></div></div>
+  </div>
+
+  <!-- 6 · Reglas claras -->
+  <div class="scene" id="s6">
+    <div class="bg"><img src="assets/bg_bandera.jpg" data-kb="1.0,1.08"></div><div class="shade" style="background:rgba(0,48,137,.35)"></div>
+    <div class="abs label" style="top:640px" id="s6a">y establece</div>
+    <div class="abs h-bebas" style="top:720px;font-size:210px" id="s6t">REGLAS<br>CLARAS</div>
+  </div>
+
+  <!-- 7, 8, 9 · Reglas -->
+  <div class="scene" id="s7">
+    <div class="bg"><img src="assets/bg_parque.jpg" data-kb="1.0,1.08"></div><div class="shade"></div>
+    <div class="abs" style="top:480px" id="s7n"><span class="num">1</span></div>
+    <div class="circle" id="s7i" style="left:445px;top:640px"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="5.5"/><path d="M12 14v7.5M9 21.5h6M12 17l-2.5-2M12 15.5l2.5-2"/></svg></div>
+    <div class="abs label" style="top:880px;padding:0 120px;font-size:56px" id="s7t">No puede afectar el <b style="color:var(--amarillo)">uso público</b> del bien</div>
+  </div>
+  <div class="scene" id="s8">
+    <div class="bg"><img src="assets/bg_ciudad.jpg" data-kb="1.18,1.08"></div><div class="shade"></div>
+    <div class="abs" style="top:480px" id="s8n"><span class="num">2</span></div>
+    <div class="circle" id="s8i" style="left:445px;top:640px"><svg viewBox="0 0 24 24"><rect x="4.5" y="3" width="15" height="14.5" rx="2.5"/><path d="M4.5 10.5h15M8 20.5v-3M16 20.5v-3M9.5 6h5"/><circle cx="8.5" cy="14" r=".8"/><circle cx="15.5" cy="14" r=".8"/></svg></div>
+    <div class="abs label" style="top:880px;padding:0 110px;font-size:56px" id="s8t">No puede interrumpir el <b style="color:var(--amarillo)">servicio</b> al que está destinado</div>
+  </div>
+  <div class="scene" id="s9">
+    <div class="bg"><img src="assets/bg_ciudad_plana.jpg" data-kb="1.1,1.0"></div><div class="shade" style="background:rgba(20,22,24,.45)"></div>
+    <div class="abs" style="top:480px" id="s9n"><span class="num">3</span></div>
+    <div class="circle" id="s9i" style="left:445px;top:640px"><svg viewBox="0 0 24 24"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2zM9 4v14M15 6v14"/></svg></div>
+    <div class="abs label" style="top:880px;padding:0 100px;font-size:56px" id="s9t">Debe respetar el <b style="color:var(--amarillo)">ordenamiento territorial</b> de cada municipio</div>
+  </div>
+
+  <div class="wipe" id="w1"><i></i><i></i><i></i></div>
+  <div class="wipe" id="w2"><i></i><i></i><i></i></div>
+  <img id="header" src="assets/header.png">
+  <div id="bar"><i></i><i></i><i></i></div>
+</div>
+
+<script>
+// Línea de tiempo (segundos). Ajustar a la locución grabada.
+const T = {
+  s1: [0, 3.7], s2: [3.7, 8.6], s3: [8.6, 12.6], s4: [12.6, 19.2], s5: [19.2, 23.8],
+  s6: [23.8, 26.6], s7: [26.6, 30.4], s8: [30.4, 34.4], s9: [34.4, 39.0],
+};
+const WIPES = { w1: 3.7, w2: 23.8 };   // centro de la transición bandera
+const DURATION = 39.0;
+const XF = 0.35;                       // fundido cruzado entre escenas
+
+const $ = id => document.getElementById(id);
+const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+const easeOut = x => 1 - Math.pow(1 - clamp(x), 3);
+const easeInOut = x => { x = clamp(x); return x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; };
+const backOut = x => { x = clamp(x); const c = 1.7; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const prog = (t, start, dur) => clamp((t - start) / dur);
+
+// Aparición: sube 60px y se desvanece
+function rise(el, t, start, dur = .5) {
+  const p = easeOut(prog(t, start, dur));
+  el.style.opacity = p; el.style.transform = `translateY(${(1 - p) * 60}px)`;
+}
+function pop(el, t, start, dur = .45) {
+  const p = prog(t, start, dur);
+  el.style.opacity = clamp(p * 3); el.style.transform = `scale(${p === 0 ? 0 : backOut(p)})`;
+}
+function grow(el, t, start, dur = .4) {
+  el.style.transform = `scaleX(${easeOut(prog(t, start, dur))})`;
+}
+
+function renderAt(t) {
+  // Escenas, Ken Burns del fondo y fundidos
+  for (const [id, [a, b]] of Object.entries(T)) {
+    const s = $(id);
+    const wiped = Object.values(WIPES).some(w => Math.abs(w - a) < .01 || Math.abs(w - b) < .01);
+    let o;
+    if (t < a || t >= b + (wiped ? 0 : XF)) o = 0;
+    else if (wiped) o = 1;
+    else o = t < a + XF && a > 0 ? prog(t, a, XF) : 1;
+    // las escenas que entran por wipe aparecen justo a la mitad
+    s.style.opacity = o;
+    s.style.zIndex = Math.round(a * 10);
+    const img = s.querySelector('.bg img');
+    const [k0, k1] = img.dataset.kb.split(',').map(Number);
+    const k = k0 + (k1 - k0) * clamp((t - a) / (b - a + XF));
+    img.style.transform = `translate(-50%, -50%) scale(${k})`;
+  }
+
+  // Transiciones bandera: franjas diagonales que barren la pantalla
+  for (const [id, c] of Object.entries(WIPES)) {
+    const p = prog(t, c - .45, .9);
+    const el = $(id);
+    el.style.display = p > 0 && p < 1 ? 'block' : 'none';
+    const x = -3200 + easeInOut(p) * 6400;
+    el.style.transform = `translate(${x}px, 0) rotate(-28deg)`;
+  }
+
+  // 1 · Título palabra por palabra
+  pop($('s1b'), t, .2);
+  [...$('s1t').children].forEach((w, i) => {
+    const p = backOut(prog(t, .45 + i * .2, .4));
+    w.style.display = 'inline-block'; w.style.opacity = clamp(prog(t, .45 + i * .2, .15));
+    w.style.transform = `scale(${.4 + .6 * p})`;
+  });
+
+  // 2 · Contrato
+  const a2 = T.s2[0];
+  rise($('s2t'), t, a2 + .5);
+  pop($('s2a'), t, a2 + 1.1); rise($('s2la'), t, a2 + 1.3);
+  grow($('s2l1'), t, a2 + 1.8); pop($('s2c'), t, a2 + 2.1);
+  grow($('s2l2'), t, a2 + 2.4); pop($('s2b'), t, a2 + 2.7); rise($('s2lb'), t, a2 + 2.9);
+
+  // 3 · Folio
+  const a3 = T.s3[0];
+  rise($('s3a'), t, a3 + .3); rise($('s3t'), t, a3 + .6, .6); rise($('s3s'), t, a3 + 1.1); pop($('s3i'), t, a3 + 1.6);
+
+  // 4 · Estudios
+  const a4 = T.s4[0];
+  rise($('s4t'), t, a4 + .3);
+  [1, 2, 3].forEach(i => { pop($('s4i' + i), t, a4 + .9 + (i - 1) * .7); rise($('s4l' + i), t, a4 + 1.1 + (i - 1) * .7); });
+  pop($('s4p'), t, a4 + 4.0, .5);
+
+  // 5 · 80 años (contador)
+  const a5 = T.s5[0];
+  rise($('s5a'), t, a5 + .3); rise($('s5h'), t, a5 + .7);
+  const pc = easeOut(prog(t, a5 + .9, 1.8));
+  $('s5n').textContent = Math.round(80 * pc);
+  $('s5n').style.opacity = clamp(prog(t, a5 + .9, .2));
+  rise($('s5y'), t, a5 + 1.4);
+  $('s5bar').style.width = (pc * 100) + '%';
+
+  // 6 · Reglas claras
+  const a6 = T.s6[0];
+  rise($('s6a'), t, a6 + .35); pop($('s6t'), t, a6 + .6, .55);
+
+  // 7–9 · Reglas
+  for (const n of [7, 8, 9]) {
+    const a = T['s' + n][0];
+    pop($('s' + n + 'n'), t, a + .25); pop($('s' + n + 'i'), t, a + .55); rise($('s' + n + 't'), t, a + .95, .6);
+  }
+
+  // Al final el cabezote se mantiene; el cierre CISA se pega aparte (outro.mp4)
+}
+
+window.renderAt = renderAt;
+window.DURATION = DURATION;
+renderAt(0);
+</script>
+</body>
+</html>
