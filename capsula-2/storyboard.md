@@ -1,6 +1,6 @@
 # Cápsula 2: ¿Cómo funciona y qué límites tiene?, storyboard
 
-Formato: **1080 × 1920 (vertical 9:16)**, ~44 s. El borrador animado es `capsula2_borrador.mp4`.
+Formato: **1080 × 1920 (vertical 9:16)**, ~44 s. El borrador animado `capsula2_borrador.mp4` sirve como referencia de tiempos y animación de textos e íconos; sus fondos son provisionales.
 
 ## Sistema visual (sacado de la Cápsula 1)
 
@@ -15,24 +15,28 @@ Formato: **1080 × 1920 (vertical 9:16)**, ~44 s. El borrador animado es `capsul
 | Transición fuerte | Barrido de franjas diagonales amarillo/azul/rojo (como la del inicio de la Cápsula 1) |
 | Cierre | El mismo final con el logo CISA de la Cápsula 1 |
 
-## Escenas
+## Escenas (con material nuevo de Canva, distinto al de la Cápsula 1)
 
-| # | Tiempo | Locución | Visual | En Canva |
+Se mantiene el sistema visual de la Cápsula 1 (cabezote, franja, íconos verdes, tipografías, transición bandera y cierre CISA), pero **todos los videos, fotos y personajes son nuevos**. En la columna "Buscar en Canva" están los términos para Elementos y Videos; en Personajes, usa el mismo estilo de ilustración plana de la Cápsula 1 (busca *"flat people business"* y filtra por el mismo artista o colección para que combinen).
+
+| # | Tiempo | Locución | En pantalla | Buscar en Canva (material nuevo) |
 |---|---|---|---|---|
-| 1 | 0:00–0:03.7 | *(entrada con música)* | Ciudad ilustrada plana + etiqueta amarilla "CÁPSULA 2" + título **¿CÓMO FUNCIONA Y QUÉ LÍMITES TIENE?** palabra por palabra | Igual que el globo terráqueo de la Cápsula 1: ilustración plana y personaje señalando el título |
-| ↯ | 0:03.7 | | **Transición bandera** | |
-| 2 | 0:03.7–0:08.6 | "Para constituir el DRS, la entidad pública y el tercero interesado firman un contrato…" | Fondo de planos. Ícono banco (Entidad pública · Superficiante) ── documento ── ícono persona (Tercero interesado · Superficiario) | Reutiliza los personajes del apretón de manos de "El contrato" en la mitad inferior. Búsqueda: *firma contrato*, *signing document* |
-| 3 | 0:08.6–0:12.6 | "…que debe inscribirse en el folio de matrícula del inmueble…" | Ciudad. "Se inscribe en el" / **FOLIO DE MATRÍCULA** / "del inmueble" + ícono de documento con check | Personaje con carpeta o sello. Búsqueda: *registro*, *notaría*, *documento sello* |
-| 4 | 0:12.6–0:19.2 | "…después de los respectivos estudios jurídicos, técnicos y financieros que demuestren que el proyecto es viable." | Tres íconos verdes: balanza (Jurídicos), casco (Técnicos), gráfica (Financieros) + píldora "✓ El proyecto es viable" | Mismo patrón que "Usar · Construir · Explorar". Personaje frente a computador con gráfica (como el de la Cápsula 1) |
-| 5 | 0:19.2–0:23.8 | "Este derecho puede durar hasta 80 años…" | **HASTA 80 AÑOS**: el número cuenta de 0 a 80 en amarillo, con una barra verde que se llena | Toma aérea de ciudad. Elemento Canva: *reloj*, *calendario* |
-| ↯ | 0:23.8 | | **Transición bandera** | |
-| 6 | 0:23.8–0:26.6 | "…y establece reglas claras:" | Bandera ondeando, **REGLAS CLARAS** | Clip de bandera ondeando de la Cápsula 1 |
-| 7 | 0:26.6–0:30.4 | "No puede afectar el uso público del bien." | Parque + número **1** en círculo amarillo + ícono árbol | Personas caminando en parque. Búsqueda: *parque Bogotá*, *park people walking* |
-| 8 | 0:30.4–0:34.4 | "No puede interrumpir el servicio al que está destinado." | Número **2** + ícono bus | Clip TransMilenio / terminal de la Cápsula 1 |
-| 9 | 0:34.4–0:39.0 | "Debe respetar las normas de ordenamiento territorial de cada municipio." | Número **3** + ícono mapa | Toma aérea / plano de ciudad. Personaje con mapa (como el de "El Estado conserva la propiedad") |
-| 10 | 0:39.0–0:44.1 | *(música)* | Cierre con logo CISA | El mismo final de la Cápsula 1 |
+| 1 | 0:00–0:03.7 | *(música)* | Etiqueta "CÁPSULA 2" + **¿CÓMO FUNCIONA Y QUÉ LÍMITES TIENE?** | Fondo plano de color (azul o teal) + ilustración *"engranajes"*, *"gears mechanism flat"* y un personaje señalando, distinto al del globo |
+| ↯ | 0:03.7 | | Transición bandera | La misma de la Cápsula 1 (es parte de la identidad) |
+| 2 | 0:03.7–0:08.6 | "Para constituir el DRS, la entidad pública y el tercero interesado firman un contrato…" | Íconos: banco ── documento ── persona | Video: *"business meeting handshake office"*, *"firma de documento bolígrafo"*. Personajes: dos personas en una mesa firmando (*"people signing contract flat"*) |
+| 3 | 0:08.6–0:12.6 | "…que debe inscribirse en el folio de matrícula del inmueble…" | **FOLIO DE MATRÍCULA** + documento con check | Video: *"archivo carpetas oficina"*, *"stamp document"*. Elemento: *"sello aprobado"*, *"folder flat illustration"*. Personaje con carpeta |
+| 4 | 0:12.6–0:19.2 | "…estudios jurídicos, técnicos y financieros que demuestren que el proyecto es viable." | Balanza · casco · gráfica + "✓ El proyecto es viable" | Video: *"architect reviewing blueprints"*, *"engineer tablet construction site"*. Elementos: *"scale of justice icon"*, *"hard hat icon"*, *"growth chart icon"*. Personaje con lupa revisando documentos |
+| 5 | 0:19.2–0:23.8 | "Este derecho puede durar hasta 80 años…" | **HASTA 80 AÑOS** (contador) | Video: *"time lapse city day night"*, *"Medellín aerial"* o *"Cali aerial"* (diferente a Bogotá de la Cápsula 1). Elemento: *"hourglass flat"*, *"calendar flat"* |
+| ↯ | 0:23.8 | | Transición bandera | |
+| 6 | 0:23.8–0:26.6 | "…y establece reglas claras:" | **REGLAS CLARAS** | Video: *"Colombia flag waving"* (otra toma) o fondo plano amarillo. Personaje con lista de verificación (*"checklist character flat"*) |
+| 7 | 0:26.6–0:30.4 | "No puede afectar el uso público del bien." | **1** + ícono árbol | Video: *"families park playground"*, *"plaza people walking Latin America"* |
+| 8 | 0:30.4–0:34.4 | "No puede interrumpir el servicio al que está destinado." | **2** + ícono bus | Video: *"bus station passengers"*, *"metro train station"*, *"cable car Medellín"* (no TransMilenio, que ya salió) |
+| 9 | 0:34.4–0:39.0 | "Debe respetar las normas de ordenamiento territorial de cada municipio." | **3** + ícono mapa | Video: *"urban planning map"*, *"city plan zoning"*, *"drone town Colombia"*. Personaje con plano o maqueta |
+| 10 | 0:39.0–0:44.1 | *(música)* | Cierre CISA | El mismo de la Cápsula 1 |
 
-> Los tiempos son estimados para una lectura de ~2,6 palabras por segundo. Cuando tengas el audio grabado, ajusta la duración de cada escena a la locución.
+> Los tiempos son estimados para una lectura de ~2,6 palabras por segundo. Ajústalos cuando tengas el audio.
+
+**Truco para no rehacer el estilo:** en Canva, *Archivo → Hacer una copia* del video de la Cápsula 1. Así conservas el cabezote, la franja, las transiciones y el cierre, y solo cambias fondos, personajes y textos escena por escena siguiendo esta tabla.
 
 ## Cómo editar y volver a renderizar el borrador
 
